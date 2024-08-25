@@ -1,0 +1,22 @@
+# "2 Sums" Find 2 integers that add up to the target value, return the index of the two integers
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # Create a hashmap
+        prevHash = {} # val : index
+
+        # To save time checking if the difference even exist (diff = target - List[i])
+        # Note enumerate is O(n), Best case O(1), worst case O(n)
+        for i, n in enumerate(nums):
+            diff = target - n
+            # this list should start out empty
+            if diff in prevHash:
+                return [prevHash[diff],i]
+            # otherwise, we set n ("value : index") to whatever index i is 
+            prevHash[n] = i
+        return
+                
+
+
+
+        
+        
