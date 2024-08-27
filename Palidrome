@@ -1,0 +1,13 @@
+
+# Bad Time Complexity
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        og_list = list(str(x))
+        rev_list = list(str(x))
+        rev_list.reverse()
+        if og_list == rev_list:
+             return True
+        else:
+            # return False
+            return False
+            
